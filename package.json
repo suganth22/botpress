@@ -2,12 +2,12 @@
   "name": "botpress",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter @botpress/cli exec bp dev",
-    "generate": "pnpm --filter @botpress/cli exec bp generate",
-    "bundle": "pnpm --filter @botpress/cli exec bp bundle",
+    "dev": "pnpm --filter @botpress/cli exec bp dev bots/my-bot",
+    "generate": "pnpm --filter @botpress/cli exec bp generate bots/my-bot",
+    "bundle": "pnpm --filter @botpress/cli exec bp bundle bots/my-bot",
     "build": "pnpm run generate && pnpm run bundle",
-    "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve",
-    "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy",
+    "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve bots/my-bot",
+    "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy bots/my-bot",
     "start": "pnpm run serve",
 
     "bump": "depsynky bump --ignore-dev && pnpm -w install",
@@ -73,4 +73,3 @@
   },
   "packageManager": "pnpm@8.6.2"
 }
-
