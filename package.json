@@ -6,10 +6,10 @@
     "generate": "cd bots/hello-world && bp generate",
     "bundle": "cd bots/hello-world && bp bundle",
     "build": "pnpm run generate && pnpm run bundle",
-    "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve bots/hello-world",
-    "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy bots/hello-world",
+    "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve --bot hello-world",
+    "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy --bot hello-world",
     "start": "pnpm run serve",
-
+    
     "bump": "depsynky bump --ignore-dev && pnpm -w install",
     "test": "vitest --run",
 
