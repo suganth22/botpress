@@ -8,7 +8,7 @@
     "build": "pnpm run generate && pnpm run bundle",
     "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve --workDir bots/hello-world",
     "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy --workDir bots/hello-world",
-    "start": "pnpm run serve"
+    "start": "pnpm run serve",
     
     "bump": "depsynky bump --ignore-dev && pnpm -w install",
     "test": "vitest --run",
