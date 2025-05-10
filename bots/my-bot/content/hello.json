@@ -1,0 +1,10 @@
+{
+  "hello": {
+    "type": "text",
+    "text": "Hello! How can I help you today?"
+  },
+  "goodbye": {
+    "type": "text",
+    "text": "Goodbye! Have a great day!"
+  }
+}
