@@ -2,33 +2,20 @@
   "name": "botpress",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter @botpress/cli exec bp dev",
-    "generate": "cd bots/hello-world && bp generate",
-    "bundle": "cd bots/hello-world && bp bundle",
-    "build": "pnpm run generate && pnpm run bundle",
-    "serve": "node packages/studio/dist/index.js --port ${PORT:-3000}",
-    "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy --workDir ../../bots/hello-world",
+    "serve": "bp dev --cloud=none --port ${PORT:-3000}", 
     "start": "pnpm run serve",
-    
-    "bump": "depsynky bump --ignore-dev && pnpm -w install",
     "test": "vitest --run",
 
-    "check:bplint": "turbo check:bplint",
-    "check:dep": "depsynky check --ignore-dev",
-    "check:sherif": "sherif -i zod -i axios -i query-string -i googleapis",
     "check:format": "prettier --check .",
     "check:eslint": "eslint ./",
     "check:oxlint": "oxlint -c .oxlintrc.json",
-    "check:lint": "pnpm check:bplint && pnpm check:oxlint && pnpm check:eslint",
-    "check:type": "turbo check:type",
-    "check": "pnpm check:sherif && pnpm check:dep && pnpm check:format && pnpm check:lint && pnpm check:type",
+    "check:lint": "pnpm check:oxlint && pnpm check:eslint",
+    "check": "pnpm check:format && pnpm check:lint",
 
-    "fix:dep": "depsynky sync --ignore-dev",
-    "fix:sherif": "sherif -i zod -i axios -i query-string -i googleapis --fix",
     "fix:format": "prettier --write .",
     "fix:oxlint": "oxlint -c .oxlintrc.json --fix --fix-suggestions",
     "fix:lint": "eslint --fix ./",
-    "fix": "pnpm fix:sherif && pnpm fix:dep && pnpm fix:oxlint && pnpm fix:format && pnpm fix:lint"
+    "fix": "pnpm fix:oxlint && pnpm fix:format && pnpm fix:lint"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}": [
