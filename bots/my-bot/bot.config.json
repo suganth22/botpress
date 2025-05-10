@@ -1,0 +1,8 @@
+{
+  "$schema": "https://schemas.botpress.cloud/v0/bot.config.schema.json",
+  "name": "my-bot",
+  "version": "1.0.0",
+  "description": "A Botpress bot created manually",
+  "keywords": [],
+  "license": "MIT"
+}
