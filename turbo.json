@@ -38,6 +38,9 @@
       "outputs": ["dist/**"],
       "dependsOn": ["generate", "^build"]
     },
+    "@botpresshub/confluence#build": {
+      "dependsOn": ["@botpress/cli#build"]
+    },
     "check:type": {},
     "check:bplint": {}
   }
