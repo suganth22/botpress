@@ -3,11 +3,11 @@
   "private": true,
   "scripts": {
     "dev": "pnpm --filter @botpress/cli exec bp dev",
-    "generate": "cd bots/my-bot && bp generate",
-    "bundle": "cd bots/my-bot && bp bundle",
+    "generate": "cd bots/hello-world && bp generate",
+    "bundle": "cd bots/hello-world && bp bundle",
     "build": "pnpm run generate && pnpm run bundle",
-    "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve bots/my-bot",
-    "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy bots/my-bot",
+    "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve bots/hello-world",
+    "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy bots/hello-world",
     "start": "pnpm run serve",
 
     "bump": "depsynky bump --ignore-dev && pnpm -w install",
