@@ -2,9 +2,9 @@
   "name": "botpress",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter @botpress/cli exec bp dev bots/my-bot",
-    "generate": "pnpm --filter @botpress/cli exec bp generate bots/my-bot",
-    "bundle": "pnpm --filter @botpress/cli exec bp bundle bots/my-bot",
+    "dev": "pnpm --filter @botpress/cli exec bp dev",
+    "generate": "cd bots/my-bot && bp generate",
+    "bundle": "cd bots/my-bot && bp bundle",
     "build": "pnpm run generate && pnpm run bundle",
     "serve": "pnpm run build && pnpm --filter @botpress/cli exec bp serve bots/my-bot",
     "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy bots/my-bot",
