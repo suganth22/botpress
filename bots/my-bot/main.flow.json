@@ -1,0 +1,41 @@
+{
+  "version": "0.1",
+  "content": [
+    {
+      "id": "start",
+      "name": "Start",
+      "next": [
+        {
+          "condition": "true",
+          "node": "welcome"
+        }
+      ]
+    },
+    {
+      "id": "welcome",
+      "name": "Welcome",
+      "onEnter": [
+        {
+          "type": "text",
+          "text": "Hello! Welcome to the bot."
+        }
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "end"
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "name": "End",
+      "onEnter": [
+        {
+          "type": "text",
+          "text": "Goodbye!"
+        }
+      ]
+    }
+  ]
+}
