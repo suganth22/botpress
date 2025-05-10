@@ -1,8 +1,16 @@
 {
   "$schema": "https://schemas.botpress.cloud/v0/bot.config.schema.json",
-  "name": "my-bot",
+  "id": "my-bot",
+  "name": "My Bot",
   "version": "1.0.0",
   "description": "A Botpress bot created manually",
   "keywords": [],
-  "license": "MIT"
+  "license": "MIT",
+  "settings": {
+    "language": "en"
+  },
+  "flow": {
+    "start": "main.flow.json"
+  },
+  "skills": []
 }
