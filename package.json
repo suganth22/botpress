@@ -6,7 +6,7 @@
     "generate": "cd bots/hello-world && bp generate",
     "bundle": "cd bots/hello-world && bp bundle",
     "build": "pnpm run generate && pnpm run bundle",
-    "serve": "pnpm run build && bp serve --workDir ./bots/hello-world --port ${PORT:-3000}",
+    "serve": "pnpm run build && bp serve --workDir bots/hello-world --port 3000",
     "deploy": "pnpm run build && pnpm --filter @botpress/cli exec bp deploy --workDir ../../bots/hello-world",
     "start": "pnpm run serve",
     
