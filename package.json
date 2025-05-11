@@ -2,9 +2,8 @@
   "name": "botpress",
   "private": true,
   "scripts": { 
-    "build": "NODE_OPTIONS=--max-old-space-size=1024 tsc -p packages/cli/tsconfig.json",
     "serve": "bp dev --apiUrl=http://localhost --workspaceId=local --token=dummy --port=${PORT:-3000}",
-    "start": "pnpm run build && pnpm run serve",
+    "start": "pnpm run serve",
     "test": "vitest --run",
 
     "check:format": "prettier --check .",
