@@ -2,7 +2,7 @@
   "name": "botpress",
   "private": true,
   "scripts": { 
-    "serve": "bp dev --apiUrl=http://localhost --workspaceId=local --token=dummy --port=${PORT:-3000}",
+    "serve": "cd packages/cli && bp dev --apiUrl=http://localhost --workspaceId=local --token=dummy --port=${PORT:-3000}",
     "start": "pnpm run serve",
     "test": "vitest --run",
 
