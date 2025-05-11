@@ -2,8 +2,9 @@
   "name": "botpress",
   "private": true,
   "scripts": {
+    "build": "turbo run build", 
     "serve": "bp dev --apiUrl=http://localhost --workspaceId=local --token=dummy --port=${PORT:-3000}",
-    "start": "pnpm run serve",
+    "start": "pnpm run build && pnpm run serve,
     "test": "vitest --run",
 
     "check:format": "prettier --check .",
