@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schemas.botpress.cloud/v0/config.schema.json",
+  "name": "my-bot",
+  "description": "A simple Botpress bot",
+  "version": "0.1.0",
+  "workspaceId": "local",
+  "entry": "src/main.ts",
+  "port": 3000
+}
