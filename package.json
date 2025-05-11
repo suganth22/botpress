@@ -3,7 +3,7 @@
   "private": true,
   "scripts": { 
     "start": "pnpm run serve",
-    "serve": "cd packages/cli && bp dev --apiUrl=http://localhost --workspaceId=local --token=dummy --port=${PORT:-3000}",
+    "serve": "pnpm --filter @botpress/server dev",
     "test": "vitest --run",
 
     "check:format": "prettier --check .",
